@@ -174,7 +174,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   listen (>= 3.0.5, < 3.2)
-  puma (~> 3.11)
+  puma
   rails (~> 6.0.0)
   sidekiq
   sqlite3 (~> 1.4)
