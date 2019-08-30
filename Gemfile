@@ -4,6 +4,7 @@ gem "rails", "~> 6.0.0"
 gem "sqlite3", "~> 1.4"
 gem "puma", "~> 3.11"
 gem "bootsnap", ">= 1.4.2", require: false
+gem "sidekiq", require: false
 
 group :development, :test do
 end
