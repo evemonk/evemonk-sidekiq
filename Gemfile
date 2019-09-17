@@ -7,6 +7,7 @@ gem "sqlite3", "~> 1.4"
 gem "puma"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "sidekiq", require: false
+gem "sidekiq-scheduler", require: false
 
 group :development, :test do
 end
