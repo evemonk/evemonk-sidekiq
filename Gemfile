@@ -6,7 +6,7 @@ gem "rails", "~> 6.0.0"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma"
 gem "bootsnap", ">= 1.4.2", require: false
-gem "sidekiq", require: false
+gem "sidekiq", "< 6", require: false
 gem "sidekiq-scheduler", require: false
 gem "activerecord-nulldb-adapter"
 
