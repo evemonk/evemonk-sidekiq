@@ -64,7 +64,7 @@ GEM
     builder (3.2.3)
     concurrent-ruby (1.1.5)
     connection_pool (2.2.2)
-    crass (1.0.4)
+    crass (1.0.5)
     erubi (1.9.0)
     et-orbi (1.2.2)
       tzinfo
