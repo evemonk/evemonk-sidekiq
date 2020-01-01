@@ -119,7 +119,7 @@ GEM
       nio4r (~> 2.0)
     raabro (1.1.6)
     rack (2.0.8)
-    rack-protection (2.0.8)
+    rack-protection (2.0.8.1)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
