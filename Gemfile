@@ -9,6 +9,8 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "sidekiq", require: false
 gem "activerecord-nulldb-adapter"
 
+gem "rack", git: "https://github.com/rack/rack.git", ref: "f690bb71425aa31d7b9b3113829af773950d8ab5"
+
 group :development, :test do
 end
 
