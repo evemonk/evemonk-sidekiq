@@ -1,13 +1,13 @@
-FROM ruby:2.7.0-slim
+FROM ruby:2.7.1-slim
 
 LABEL maintainer="Igor Zubkov <igor.zubkov@gmail.com>"
 
-RUN apt-get update -y && \
-    apt-get dist-upgrade -y && \
-    apt-get install git gcc make wait-for-it libpq-dev --no-install-recommends -y
-
-RUN apt-get autoremove -y && \
-    apt-get clean -y && \
+RUN set -eux; \
+    apt-get update -y ; \
+    apt-get dist-upgrade -y ; \
+    apt-get install git gcc make wait-for-it libpq-dev --no-install-recommends -y ; \
+    apt-get autoremove -y  ; \
+    apt-get clean -y  ; \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /app
@@ -24,7 +24,7 @@ ENV RUBYGEMS_VERSION 3.1.2
 
 RUN gem update --system "$RUBYGEMS_VERSION"
 
-ENV BUNDLER_VERSION 2.1.2
+ENV BUNDLER_VERSION 2.1.4
 
 RUN gem install bundler --version "$BUNDLER_VERSION" --force
 
@@ -44,8 +44,6 @@ RUN bundle install
 
 COPY . .
 
-# RUN bundle exec rake SECRET_KEY_BASE=blablabla DB_ADAPTER=nulldb assets:precompile
+EXPOSE 3000/tcp
 
-EXPOSE 3000
-
-ENTRYPOINT ./bin/app.sh
+ENTRYPOINT ["bin/app.sh"]

@@ -2,3 +2,6 @@
 .idea/*
 .env
 .env.example
+.circleci/*
+.fasterer.yml
+.rubocop.yml
