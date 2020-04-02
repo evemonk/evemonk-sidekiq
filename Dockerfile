@@ -1,4 +1,4 @@
-FROM ruby:2.7.0-slim
+FROM ruby:2.7.1-slim
 
 LABEL maintainer="Igor Zubkov <igor.zubkov@gmail.com>"
 
@@ -24,7 +24,7 @@ ENV RUBYGEMS_VERSION 3.1.2
 
 RUN gem update --system "$RUBYGEMS_VERSION"
 
-ENV BUNDLER_VERSION 2.1.2
+ENV BUNDLER_VERSION 2.1.4
 
 RUN gem install bundler --version "$BUNDLER_VERSION" --force
 
@@ -46,6 +46,6 @@ COPY . .
 
 # RUN bundle exec rake SECRET_KEY_BASE=blablabla DB_ADAPTER=nulldb assets:precompile
 
-EXPOSE 3000
+EXPOSE 3000/tcp
 
 ENTRYPOINT ./bin/app.sh
