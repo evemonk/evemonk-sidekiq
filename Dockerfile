@@ -46,4 +46,4 @@ COPY . .
 
 EXPOSE 3000/tcp
 
-ENTRYPOINT ["bin/app.sh"]
+ENTRYPOINT ["bin/app"]
