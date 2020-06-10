@@ -1,3 +1,4 @@
 # EveMonk Sidekiq
 
+[![CircleCI](https://circleci.com/gh/evemonk/evemonk-sidekiq.svg?style=svg)](https://circleci.com/gh/evemonk/evemonk-sidekiq)
 [![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/evemonk/evemonk-sidekiq/?ref=repository-badge)
