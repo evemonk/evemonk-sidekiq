@@ -1,24 +1,6 @@
-# README
+# EveMonk Sidekiq
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![CircleCI](https://circleci.com/gh/evemonk/evemonk-sidekiq.svg?style=svg)](https://circleci.com/gh/evemonk/evemonk-sidekiq)
+[![Known Vulnerabilities](https://snyk.io/test/github/evemonk/evemonk-sidekiq/badge.svg)](https://snyk.io/test/github/evemonk/evemonk-sidekiq)
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/evemonk/evemonk-sidekiq/?ref=repository-badge)
+[![security](https://hakiri.io/github/evemonk/evemonk-sidekiq/master.svg)](https://hakiri.io/github/evemonk/evemonk-sidekiq/master)
