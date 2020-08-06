@@ -6,3 +6,4 @@
 .fasterer.yml
 .rubocop.yml
 .deepsource.toml
+.generators

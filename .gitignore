@@ -16,3 +16,4 @@
 /public/assets
 
 .idea/*
+.generators
