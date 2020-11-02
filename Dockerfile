@@ -42,6 +42,8 @@ RUN bundle config set --global retry 5
 
 RUN bundle install
 
+RUN bundle exec bootsnap precompile --gemfile app/ lib/
+
 COPY . .
 
 EXPOSE 3000/tcp
