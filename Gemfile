@@ -24,5 +24,5 @@ group :development, :test do
 end
 
 group :development do
-  gem "listen", "~> 3.3"
+  gem "listen", "~> 3.4"
 end
