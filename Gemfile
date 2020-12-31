@@ -11,6 +11,8 @@ gem "bootsnap", ">= 1.4.4", require: false
 gem "sidekiq", require: false
 gem "activerecord-nulldb-adapter"
 
+gem "nokogiri", ">= 1.11.0.rc4"
+
 group :development, :test do
   gem "bundler-audit", require: false
   gem "bundler-leak", require: false
