@@ -209,7 +209,6 @@ DEPENDENCIES
   bundler-leak
   license_finder
   listen (~> 3.4)
-  nokogiri (>= 1.11.0.rc4)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 6.1.0)
