@@ -9,7 +9,6 @@ gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "sidekiq", require: false
-gem "activerecord-nulldb-adapter"
 
 group :development, :test do
   gem "bundler-audit", require: false
