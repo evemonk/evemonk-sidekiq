@@ -52,6 +52,8 @@ RUN bundle exec bootsnap precompile --gemfile app/ lib/
 
 COPY . .
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 ENV LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2
 
 EXPOSE 3000/tcp
