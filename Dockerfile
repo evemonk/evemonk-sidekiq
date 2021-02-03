@@ -6,7 +6,7 @@ LABEL maintainer="Igor Zubkov <igor.zubkov@gmail.com>"
 RUN set -eux; \
     apt-get update -y ; \
     apt-get dist-upgrade -y ; \
-    apt-get install git gcc make libpq-dev --no-install-recommends -y ; \
+    apt-get install git gcc make libpq-dev libjemalloc2 --no-install-recommends -y ; \
     apt-get autoremove -y  ; \
     apt-get clean -y  ; \
     rm -rf /var/lib/apt/lists/*
@@ -51,6 +51,8 @@ RUN bundle install
 RUN bundle exec bootsnap precompile --gemfile app/ lib/
 
 COPY . .
+
+ENV LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2
 
 EXPOSE 3000/tcp
 
