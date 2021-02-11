@@ -68,9 +68,6 @@ GEM
     bundler-audit (0.7.0.1)
       bundler (>= 1.2.0, < 3)
       thor (>= 0.18, < 2)
-    bundler-leak (0.2.0)
-      bundler (>= 1.2.0, < 3)
-      thor (>= 0.18, < 2)
     concurrent-ruby (1.1.8)
     connection_pool (2.2.3)
     crass (1.0.6)
@@ -203,7 +200,6 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   brakeman
   bundler-audit
-  bundler-leak
   license_finder
   listen (~> 3.4)
   pg (~> 1.1)

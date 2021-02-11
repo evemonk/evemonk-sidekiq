@@ -12,7 +12,6 @@ gem "sidekiq", require: false
 
 group :development, :test do
   gem "bundler-audit", require: false
-  gem "bundler-leak", require: false
   gem "rubocop", require: false
   gem "standard", require: false
   gem "brakeman", require: false
