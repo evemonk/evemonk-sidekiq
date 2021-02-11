@@ -41,9 +41,3 @@
     :why: dev dependency
     :versions: []
     :when: 2020-07-15 00:28:02.833945000 Z
-- - :approve
-  - bundler-leak
-  - :who: biow0lf
-    :why: dev dependency
-    :versions: []
-    :when: 2020-07-15 00:28:08.349142000 Z
