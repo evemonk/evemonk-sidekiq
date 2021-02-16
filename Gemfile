@@ -15,7 +15,7 @@ group :development, :test do
   gem "rubocop", require: false
   gem "standard", require: false
   gem "brakeman", require: false
-  # gem "fasterer", require: false
+  gem "fasterer", require: false
   gem "license_finder", require: false
 end
 
