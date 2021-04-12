@@ -16,6 +16,9 @@ gem "pg", "~> 1.1"
 gem "puma", "~> 5.2"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "sidekiq", require: false
+gem "sentry-ruby"
+gem "sentry-rails"
+gem "newrelic_rpm"
 
 group :development, :test do
   gem "bundler-audit", require: false
