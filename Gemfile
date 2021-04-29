@@ -15,6 +15,7 @@ gem "activesupport", "~> 6.1.3"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.2"
 gem "bootsnap", ">= 1.4.4", require: false
+gem "rack-floc-off"
 gem "sidekiq", require: false
 gem "sentry-ruby"
 gem "sentry-rails"
