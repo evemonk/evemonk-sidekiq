@@ -22,6 +22,7 @@ gem "sentry-rails"
 gem "newrelic_rpm"
 
 group :development, :test do
+  gem "rspec-rails"
   gem "bundler-audit", require: false
   gem "rubocop", require: false
   gem "standard", require: false
