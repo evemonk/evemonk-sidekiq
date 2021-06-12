@@ -8,3 +8,4 @@
 .rubocop.yml
 .deepsource.toml
 .generators
+.circleci/config.yml
