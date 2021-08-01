@@ -1,14 +1,12 @@
-FROM ruby:3.0.2-slim
-
-LABEL maintainer="Igor Zubkov <igor.zubkov@gmail.com>"
+FROM ruby:3.0.2-slim AS builder
 
 # skipcq: DOK-DL3008
 RUN set -eux; \
     apt-get update -y ; \
     apt-get dist-upgrade -y ; \
     apt-get install git gcc make libpq-dev libjemalloc2 shared-mime-info --no-install-recommends -y ; \
-    apt-get autoremove -y  ; \
-    apt-get clean -y  ; \
+    apt-get autoremove -y ; \
+    apt-get clean -y ; \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /app
@@ -25,14 +23,18 @@ ENV RAILS_ENV production
 
 ENV RAILS_LOG_TO_STDOUT true
 
-ENV RUBYGEMS_VERSION 3.2.24
+ENV RUBYGEMS_VERSION 3.2.25
 
 RUN gem update --system "$RUBYGEMS_VERSION"
 
-ENV BUNDLER_VERSION 2.2.24
+ENV BUNDLER_VERSION 2.2.25
 
 # skipcq: DOK-DL3028
 RUN gem install bundler --version "$BUNDLER_VERSION" --force
+
+RUN gem --version
+
+RUN bundle --version
 
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config set --global frozen 1
@@ -48,14 +50,55 @@ RUN bundle config set --global retry 5
 
 RUN bundle install
 
-RUN bundle exec bootsnap precompile --gemfile app/ lib/
+RUN rm -rf /usr/local/bundle/cache/*.gem
+
+RUN find /usr/local/bundle/gems/ -name "*.c" -delete
+
+RUN find /usr/local/bundle/gems/ -name "*.o" -delete
 
 COPY . .
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+RUN bundle exec bootsnap precompile --gemfile app/ lib/
+
+FROM ruby:3.0.2-slim
+
+LABEL maintainer="Igor Zubkov <igor.zubkov@gmail.com>"
+
+# skipcq: DOK-DL3008
+RUN set -eux; \
+    apt-get update -y ; \
+    apt-get dist-upgrade -y ; \
+    apt-get install libpq5 libjemalloc2 shared-mime-info --no-install-recommends -y ; \
+    apt-get autoremove -y ; \
+    apt-get clean -y ; \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+RUN groupadd --gid 1000 app
+
+RUN useradd --uid 1000 --no-log-init --create-home --gid app app
+
+USER app
+
+COPY --from=builder /usr/local/bundle/ /usr/local/bundle/
+COPY --from=builder /usr/local/bin/ /usr/local/bin/
+COPY --from=builder --chown=app:app /app /app
+
+ARG COMMIT=""
+
+ENV COMMIT_SHA=${COMMIT}
+
+ENV RAILS_ENV production
+
+ENV RAILS_LOG_TO_STDOUT true
+
+ENV RAILS_SERVE_STATIC_FILES true
 
 ENV LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 EXPOSE 3000/tcp
 
-ENTRYPOINT ["bin/app"]
+ENTRYPOINT ["bundle", "exec", "puma", "-C", "config/puma.rb"]
