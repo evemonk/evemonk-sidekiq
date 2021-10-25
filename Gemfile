@@ -19,6 +19,7 @@ gem "rack-floc-off"
 gem "sidekiq", require: false
 gem "sentry-ruby"
 gem "sentry-rails"
+gem "sentry-sidekiq"
 gem "newrelic_rpm"
 
 group :development, :test do
