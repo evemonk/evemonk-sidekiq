@@ -18,6 +18,7 @@ Service container for running sidekiq web UI from [sidekiq](https://github.com/m
 | `RAILS_MAX_THREADS` | Rails max threads | `2` | as default |
 | `RAILS_MIN_THREADS` | Rails min threads | `2` | as default |
 | `DATABASE_URL` | Database configuration. Example: `postgres://myuser:mypass@localhost/somedatabase` | not set | not set |
+| `REDIS_URL` | Redis configuration for sidekiq. Example: `redis://redis:6379/1` | not set | not set |
 | `NEW_RELIC_LICENSE_KEY` | New Relic license key | not set | not set |
 | `NEW_RELIC_AGENT_ENABLED` | New Relic Agent enabled? | not set | `false` |
 | `NEW_RELIC_APP_NAME` | New Relic app name | not set | not set |
