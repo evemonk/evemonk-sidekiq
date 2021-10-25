@@ -37,6 +37,6 @@ module EvemonkSidekiq
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    config.secret_key_base = ENV["SECRET_KEY_BASE"]
+    config.secret_key_base = ENV.fetch("SECRET_KEY_BASE")
   end
 end

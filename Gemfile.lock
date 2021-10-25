@@ -41,6 +41,10 @@ GEM
     connection_pool (2.2.5)
     crass (1.0.6)
     diff-lcs (1.4.4)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     faraday (1.8.0)
       faraday-em_http (~> 1.0)
@@ -169,6 +173,9 @@ GEM
     sentry-ruby-core (4.7.3)
       concurrent-ruby
       faraday
+    sentry-sidekiq (4.7.3)
+      sentry-ruby-core (~> 4.7.0)
+      sidekiq (>= 3.0)
     sexp_processor (4.15.3)
     sidekiq (6.2.2)
       connection_pool (>= 2.2.2)
@@ -201,6 +208,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   brakeman
   bundler-audit
+  dotenv-rails
   fasterer
   license_finder
   listen (~> 3.7)
@@ -213,6 +221,7 @@ DEPENDENCIES
   rubocop
   sentry-rails
   sentry-ruby
+  sentry-sidekiq
   sidekiq
   standard
 
