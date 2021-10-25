@@ -22,15 +22,16 @@ gem "sentry-rails"
 gem "newrelic_rpm"
 
 group :development, :test do
+  gem "dotenv-rails"
   gem "rspec-rails"
+end
+
+group :development do
+  gem "listen", "~> 3.7"
   gem "bundler-audit", require: false
   gem "rubocop", require: false
   gem "standard", require: false
   gem "brakeman", require: false
   gem "fasterer", require: false
   gem "license_finder", require: false
-end
-
-group :development do
-  gem "listen", "~> 3.7"
 end
