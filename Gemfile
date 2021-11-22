@@ -36,3 +36,6 @@ group :development do
   gem "fasterer", require: false
   gem "license_finder", require: false
 end
+
+# https://www.ruby-lang.org/en/news/2021/11/15/date-parsing-method-regexp-dos-cve-2021-41817/
+gem "date", ">= 3.2.1"
