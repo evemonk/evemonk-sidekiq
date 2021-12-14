@@ -4,13 +4,13 @@ source "https://rubygems.org"
 
 ruby File.read(".ruby-version")
 
-gem "railties", "6.1.4.2"
-gem "actionpack", "6.1.4.2"
-gem "actionview", "6.1.4.2"
-gem "activejob", "6.1.4.2"
-gem "activemodel", "6.1.4.2"
-gem "activerecord", "6.1.4.2"
-gem "activesupport", "6.1.4.2"
+gem "railties", "6.1.4.3"
+gem "actionpack", "6.1.4.3"
+gem "actionview", "6.1.4.3"
+gem "activejob", "6.1.4.3"
+gem "activemodel", "6.1.4.3"
+gem "activerecord", "6.1.4.3"
+gem "activesupport", "6.1.4.3"
 
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.5"
