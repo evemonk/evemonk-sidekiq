@@ -13,7 +13,7 @@ gem "activerecord", "6.1.4.3"
 gem "activesupport", "6.1.4.3"
 
 gem "pg", "~> 1.3"
-gem "puma", "~> 5.5"
+gem "puma", "~> 5.6"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "rack-floc-off"
 gem "sidekiq", require: false
