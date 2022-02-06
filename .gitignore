@@ -19,8 +19,6 @@
 !/tmp/pids/.keep
 
 /public/assets
-.byebug_history
 
 .idea/*
 .generators
-.circleci/config.yml
