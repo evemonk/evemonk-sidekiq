@@ -6,6 +6,11 @@ on:
       - main
     tags:
       - "v*.*.*"
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: "0 21 * * 6"
 
 jobs:
   build:
