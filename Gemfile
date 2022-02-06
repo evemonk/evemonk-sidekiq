@@ -12,9 +12,6 @@ gem "activemodel", "7.0.1"
 gem "activerecord", "7.0.1"
 gem "activesupport", "7.0.1"
 
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
-
 gem "pg", "~> 1.3"
 gem "puma", "~> 5.6"
 
