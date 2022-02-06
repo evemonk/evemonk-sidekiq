@@ -3,9 +3,9 @@
 .idea/*
 .env
 .env.example
-.circleci/*
 .fasterer.yml
 .rubocop.yml
 .deepsource.toml
 .generators
-.circleci/config.yml
+.gitattributes
+.gitignore
