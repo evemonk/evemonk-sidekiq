@@ -4,17 +4,26 @@ source "https://rubygems.org"
 
 ruby File.read(".ruby-version")
 
-gem "railties", "6.1.4.3"
-gem "actionpack", "6.1.4.3"
-gem "actionview", "6.1.4.3"
-gem "activejob", "6.1.4.3"
-gem "activemodel", "6.1.4.3"
-gem "activerecord", "6.1.4.3"
-gem "activesupport", "6.1.4.3"
+gem "railties", "7.0.1"
+gem "actionpack", "7.0.1"
+gem "actionview", "7.0.1"
+gem "activejob", "7.0.1"
+gem "activemodel", "7.0.1"
+gem "activerecord", "7.0.1"
+gem "activesupport", "7.0.1"
+
+# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+gem "sprockets-rails"
 
 gem "pg", "~> 1.3"
 gem "puma", "~> 5.6"
-gem "bootsnap", ">= 1.4.4", require: false
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+
+# Reduces boot times through caching; required in config/boot.rb
+gem "bootsnap", require: false
+
 gem "rack-floc-off"
 gem "sidekiq", require: false
 gem "sentry-ruby"
@@ -28,7 +37,6 @@ group :development, :test do
 end
 
 group :development do
-  gem "listen", "~> 3.7"
   gem "bundler-audit", require: false
   gem "rubocop", require: false
   gem "standard", require: false
