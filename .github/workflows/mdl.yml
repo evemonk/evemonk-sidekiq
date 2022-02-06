@@ -1,4 +1,4 @@
-name: license_finder
+name: mdl
 
 on:
   push:
@@ -11,14 +11,12 @@ on:
     - cron: "0 21 * * 6"
 
 jobs:
-  license_finder:
+  mdl:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - name: run mdl
+        uses: actionshub/markdownlint@main
         with:
-          bundler-cache: true
-      - name: run license_finder
-        run: bundle exec license_finder
+          filesToIgnoreRegex: "vendor/"
