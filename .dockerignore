@@ -10,3 +10,4 @@
 .gitattributes
 .gitignore
 .mdlrc
+.hadolint.yml
