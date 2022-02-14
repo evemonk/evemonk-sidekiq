@@ -225,7 +225,7 @@ GEM
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
-    standard (1.7.1)
+    standard (1.7.2)
       rubocop (= 1.25.1)
       rubocop-performance (= 1.13.2)
     strscan (3.0.1)
