@@ -15,7 +15,6 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-gem "rack-floc-off"
 gem "sidekiq", require: false
 gem "sentry-ruby"
 gem "sentry-rails"
