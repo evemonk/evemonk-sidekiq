@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/pivotal/LicenseFinder.git
-  revision: bf8e01f43fa98fe1cf2108f1f70e5dd52b35118c
+  revision: 0c3616f143dca769ae18b7cacac8e1a841f0b90e
   branch: master
   specs:
     license_finder (6.15.0)
