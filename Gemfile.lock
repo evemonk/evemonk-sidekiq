@@ -216,7 +216,7 @@ GEM
     sentry-sidekiq (5.2.1)
       sentry-ruby-core (~> 5.2.1)
       sidekiq (>= 3.0)
-    sexp_processor (4.16.0)
+    sexp_processor (4.16.1)
     sidekiq (6.4.1)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
