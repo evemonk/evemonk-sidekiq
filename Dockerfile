@@ -1,4 +1,4 @@
-FROM ruby:3.1.1-slim AS builder
+FROM ruby:3.1.2-slim AS builder
 
 # skipcq: DOK-DL3008
 RUN set -eux; \
@@ -23,11 +23,11 @@ ENV RAILS_ENV production
 
 ENV RAILS_LOG_TO_STDOUT true
 
-ENV RUBYGEMS_VERSION 3.3.7
+ENV RUBYGEMS_VERSION 3.3.11
 
 RUN gem update --system "$RUBYGEMS_VERSION"
 
-ENV BUNDLER_VERSION 2.3.7
+ENV BUNDLER_VERSION 2.3.11
 
 # skipcq: DOK-DL3028
 RUN gem install bundler --version "$BUNDLER_VERSION" --force
@@ -60,7 +60,7 @@ COPY . .
 
 RUN bundle exec bootsnap precompile --gemfile app/ lib/
 
-FROM ruby:3.1.1-slim
+FROM ruby:3.1.2-slim
 
 LABEL maintainer="Igor Zubkov <igor.zubkov@gmail.com>"
 
