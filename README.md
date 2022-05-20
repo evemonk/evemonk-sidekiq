@@ -18,13 +18,6 @@ Service container for running sidekiq web UI from [sidekiq](https://github.com/m
 | `RAILS_MIN_THREADS`                            | Rails min threads                                                              | `2`           | as default           |
 | `DATABASE_URL`                                 | Database configuration. Example: `postgres://user:password@localhost/database` | not set       | not set              |
 | `REDIS_URL`                                    | Redis configuration for sidekiq. Example: `redis://redis:6379/1`               | not set       | not set              |
-| `NEW_RELIC_LICENSE_KEY`                        | New Relic license key                                                          | not set       | not set              |
-| `NEW_RELIC_AGENT_ENABLED`                      | New Relic Agent enabled?                                                       | not set       | `false`              |
-| `NEW_RELIC_APP_NAME`                           | New Relic app name                                                             | not set       | not set              |
-| `NEW_RELIC_LOG_FILE_PATH`                      | New Relic log file path                                                        | not set       | `STDOUT`             |
-| `NEW_RELIC_BROWSER_MONITORING_AUTO_INSTRUMENT` | New Relic browser monitoring                                                   | not set       | not set              |
-
-[More New Relic agent options](https://docs.newrelic.com/docs/apm/agents/ruby-agent/configuration/ruby-agent-configuration/)
 
 ## Example `docker-compose.yml`
 
