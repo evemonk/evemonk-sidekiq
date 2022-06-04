@@ -1,5 +1,6 @@
 # EveMonk Sidekiq
 
+[![RSpec](https://github.com/evemonk/evemonk-sidekiq/actions/workflows/rspec.yml/badge.svg)](https://github.com/evemonk/evemonk-sidekiq/actions/workflows/rspec.yml)
 [![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/evemonk/evemonk-sidekiq/?ref=repository-badge)
 
 Service container for running sidekiq web UI from [sidekiq](https://github.com/mperham/sidekiq).
