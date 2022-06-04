@@ -16,10 +16,6 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "bootsnap", require: false
 
 gem "sidekiq", require: false
-gem "sentry-ruby"
-gem "sentry-rails"
-gem "sentry-sidekiq"
-# gem "newrelic_rpm"
 
 group :development, :test do
   gem "dotenv-rails"

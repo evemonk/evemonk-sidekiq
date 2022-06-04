@@ -204,17 +204,6 @@ GEM
     ruby_parser (3.19.1)
       sexp_processor (~> 4.16)
     rubyzip (2.3.2)
-    sentry-rails (5.3.1)
-      railties (>= 5.0)
-      sentry-ruby-core (~> 5.3.1)
-    sentry-ruby (5.3.1)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
-      sentry-ruby-core (= 5.3.1)
-    sentry-ruby-core (5.3.1)
-      concurrent-ruby
-    sentry-sidekiq (5.3.1)
-      sentry-ruby-core (~> 5.3.1)
-      sidekiq (>= 3.0)
     sexp_processor (4.16.1)
     sidekiq (6.4.2)
       connection_pool (>= 2.2.2)
@@ -255,9 +244,6 @@ DEPENDENCIES
   rails (= 7.0.3)
   rspec-rails
   rubocop
-  sentry-rails
-  sentry-ruby
-  sentry-sidekiq
   sidekiq
   standard
   tzinfo-data
