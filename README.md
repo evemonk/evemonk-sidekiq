@@ -1,7 +1,6 @@
 # EveMonk Sidekiq
 
 [![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/evemonk/evemonk-sidekiq/?ref=repository-badge)
-[![security](https://hakiri.io/github/evemonk/evemonk-sidekiq/main.svg)](https://hakiri.io/github/evemonk/evemonk-sidekiq/main)
 
 Service container for running sidekiq web UI from [sidekiq](https://github.com/mperham/sidekiq).
 
