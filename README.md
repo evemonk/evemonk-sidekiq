@@ -1,8 +1,8 @@
 # EveMonk Sidekiq
 
-[![Known Vulnerabilities](https://snyk.io/test/github/evemonk/evemonk-sidekiq/badge.svg)](https://snyk.io/test/github/evemonk/evemonk-sidekiq)
+[![RSpec](https://github.com/evemonk/evemonk-sidekiq/actions/workflows/rspec.yml/badge.svg)](https://github.com/evemonk/evemonk-sidekiq/actions/workflows/rspec.yml)
 [![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/evemonk/evemonk-sidekiq/?ref=repository-badge)
-[![security](https://hakiri.io/github/evemonk/evemonk-sidekiq/main.svg)](https://hakiri.io/github/evemonk/evemonk-sidekiq/main)
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/testdouble/standard)
 
 Service container for running sidekiq web UI from [sidekiq](https://github.com/mperham/sidekiq).
 
