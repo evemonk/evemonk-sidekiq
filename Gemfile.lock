@@ -197,7 +197,7 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.23.0)
       parser (>= 3.1.1.0)
-    rubocop-performance (1.15.0)
+    rubocop-performance (1.15.1)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
     rubocop-rails (2.17.2)
@@ -214,9 +214,9 @@ GEM
       connection_pool (>= 2.3.0)
       rack (>= 2.2.4)
       redis-client (>= 0.9.0)
-    standard (1.18.0)
+    standard (1.18.1)
       rubocop (= 1.39.0)
-      rubocop-performance (= 1.15.0)
+      rubocop-performance (= 1.15.1)
     thor (1.2.1)
     timeout (0.3.0)
     tomlrb (2.0.3)
@@ -253,7 +253,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   sidekiq
-  standard (= 1.18.0)
+  standard (= 1.18.1)
   tzinfo-data
 
 RUBY VERSION
