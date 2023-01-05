@@ -16,6 +16,7 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "bootsnap", require: false
 
 gem "sidekiq", require: false
+gem "pry-rails"
 
 group :development, :test do
   gem "dotenv-rails"
