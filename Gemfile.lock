@@ -218,7 +218,7 @@ GEM
       sexp_processor (~> 4.16)
     rubyzip (2.3.2)
     sexp_processor (4.16.1)
-    sidekiq (7.0.7)
+    sidekiq (7.0.8)
       concurrent-ruby (< 2)
       connection_pool (>= 2.3.0)
       rack (>= 2.2.4)
