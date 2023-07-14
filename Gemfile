@@ -17,6 +17,7 @@ gem "bootsnap", require: false
 
 gem "sidekiq", require: false
 gem "pry-rails"
+gem "sshkit", require: false
 
 gem "uri", ">= 0.12.2"
 
