@@ -2,9 +2,9 @@
 
 [![RSpec](https://github.com/evemonk/evemonk-sidekiq/actions/workflows/rspec.yml/badge.svg)](https://github.com/evemonk/evemonk-sidekiq/actions/workflows/rspec.yml)
 [![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/evemonk/evemonk-sidekiq/?ref=repository-badge)
-[![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/testdouble/standard)
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/standardrb/standard)
 
-Service container for running sidekiq web UI from [sidekiq](https://github.com/mperham/sidekiq).
+Service container for running sidekiq web UI from [sidekiq](https://github.com/sidekiq/sidekiq).
 
 ## Configure
 
@@ -12,8 +12,6 @@ Service container for running sidekiq web UI from [sidekiq](https://github.com/m
 |------------------------------------------------|--------------------------------------------------------------------------------|---------------|----------------------|
 | `RAILS_ENV`                                    | Rails environment                                                              | `development` | `production`         |
 | `SECRET_KEY_BASE`                              | Rails secret                                                                   | not set       | not set              |
-| `RAILS_LOG_TO_STDOUT`                          | Log everything to stdout                                                       | not set       | `true`               |
-| `RAILS_SERVE_STATIC_FILES`                     | Serve static assets from /public                                               | not set       | `true`               |
 | `RAILS_MAX_THREADS`                            | Rails max threads                                                              | `2`           | as default           |
 | `RAILS_MIN_THREADS`                            | Rails min threads                                                              | `2`           | as default           |
 | `DATABASE_URL`                                 | Database configuration. Example: `postgres://user:password@localhost/database` | not set       | not set              |
