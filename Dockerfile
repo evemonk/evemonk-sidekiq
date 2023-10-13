@@ -28,13 +28,17 @@ RUN set -eux; \
 FROM base as build
 
 # Install packages needed to build gems
-RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential git libpq-dev pkg-config
+# skipcq: DOK-DL3008
+RUN set -eux; \
+    apt-get update -qq ; \
+    apt-get dist-upgrade -qq ; \
+    apt-get install --no-install-recommends -y build-essential git libpq-dev pkg-config shared-mime-info
 
 # Install application gems
-COPY Gemfile Gemfile.lock ./
-RUN bundle install && \
-    rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git && \
+COPY .ruby-version Gemfile Gemfile.lock ./
+RUN set -eux; \
+    bundle install ; \
+    rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git ; \
     bundle exec bootsnap precompile --gemfile
 
 # Copy application code
@@ -44,15 +48,19 @@ COPY . .
 RUN bundle exec bootsnap precompile app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
+#RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
 
 # Final stage for app image
 FROM base
 
 # Install packages needed for deployment
-RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl postgresql-client && \
+RUN set -eux; \
+    apt-get update -qq ; \
+    apt-get dist-upgrade -qq ; \
+    apt-get install --no-install-recommends -y curl postgresql-client libjemalloc2 shared-mime-info ; \
+    apt-get autoremove -y ; \
+    apt-get clean -y ; \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Copy built artifacts: gems, application
@@ -64,9 +72,14 @@ RUN useradd rails --create-home --shell /bin/bash && \
     chown -R rails:rails db log tmp
 USER rails:rails
 
+ENV LD_PRELOAD="libjemalloc.so.2"
+
 # Entrypoint prepares the database.
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 # Start the server by default, this can be overwritten at runtime
-EXPOSE 3000
+EXPOSE 3000/tcp
+
 CMD ["./bin/rails", "server"]
