@@ -2,15 +2,14 @@
 
 source "https://rubygems.org"
 
-ruby File.read(".ruby-version")
+ruby file: ".ruby-version"
 
-gem "rails", "7.0.8"
-
+gem "rails", "7.1.1"
 gem "pg"
 gem "puma"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "tzinfo-data", platforms: [:windows, :jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -32,7 +31,12 @@ group :development do
   gem "rubocop-disable_syntax", require: false
   gem "rubocop-performance", require: false
   gem "rubocop-rails", require: false
-  gem "standard", "1.31.1", require: false
+  gem "standard", "1.31.2", require: false
   gem "brakeman", require: false
   gem "fasterer", require: false
+  gem "bundler-audit", require: false
+end
+
+group :test do
+  gem "simplecov", require: false
 end

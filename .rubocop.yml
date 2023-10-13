@@ -94,3 +94,6 @@ Layout/ElseAlignment:
 
 Layout/EndAlignment:
   Enabled: false
+
+Lint/EmptyBlock:
+  Enabled: false
