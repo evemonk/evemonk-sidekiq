@@ -21,3 +21,16 @@
 /app/assets/builds/*
 !/app/assets/builds/.keep
 /public/assets
+
+.github/workflows
+.idea/*
+.env
+.env.example
+.fasterer.yml
+.rubocop.yml
+.deepsource.toml
+.generators
+.gitattributes
+.gitignore
+.mdlrc
+.hadolint.yml
