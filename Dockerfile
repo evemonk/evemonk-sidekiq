@@ -4,6 +4,8 @@
 ARG RUBY_VERSION=3.2.2
 FROM registry.docker.com/library/ruby:$RUBY_VERSION-slim as base
 
+LABEL maintainer="Igor Zubkov <igor.zubkov@gmail.com>"
+
 # Rails app lives here
 WORKDIR /rails
 
@@ -11,8 +13,10 @@ WORKDIR /rails
 ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \
     BUNDLE_PATH="/usr/local/bundle" \
-    BUNDLE_WITHOUT="development"
-
+    BUNDLE_WITHOUT="development:test" \
+    BOOTSNAP_LOG="true" \
+    BOOTSNAP_READONLY="true" \
+    RUBY_YJIT_ENABLE="1"
 
 # Throw-away build stage to reduce size of final image
 FROM base as build
