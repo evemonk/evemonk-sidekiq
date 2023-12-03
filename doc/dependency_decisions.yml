@@ -1,61 +1,61 @@
 ---
-- - :permit
-  - MIT
-  - :who: "@biow0lf"
-    :why:
-    :versions: []
-    :when: 2020-04-02 00:39:20.299087000 Z
-- - :permit
-  - New BSD
-  - :who: "@biow0lf"
-    :why:
-    :versions: []
-    :when: 2020-04-02 00:39:36.522279000 Z
-- - :permit
-  - Simplified BSD
-  - :who: "@biow0lf"
-    :why:
-    :versions: []
-    :when: 2020-04-02 00:39:52.415666000 Z
-- - :permit
-  - Apache 2.0
-  - :who: "@biow0lf"
-    :why:
-    :versions: []
-    :when: 2020-04-02 00:39:57.706630000 Z
-- - :permit
-  - ruby
-  - :who: "@biow0lf"
-    :why:
-    :versions: []
-    :when: 2020-04-02 00:40:02.073644000 Z
-- - :approve
-  - brakeman
-  - :who: "@biow0lf"
-    :why: dev dependency
-    :versions: []
-    :when: 2020-07-15 00:27:53.537806000 Z
-- - :approve
-  - bundler-audit
-  - :who: "@biow0lf"
-    :why: dev dependency
-    :versions: []
-    :when: 2020-07-15 00:28:02.833945000 Z
 - - :ignore_group
   - development
   - :who: "@biow0lf"
     :why:
     :versions: []
-    :when: 2021-08-23 22:20:13.864782000 Z
+    :when: 2023-12-03 21:16:39.235363000 Z
 - - :ignore_group
   - test
   - :who: "@biow0lf"
     :why:
     :versions: []
-    :when: 2021-08-23 22:20:19.911924000 Z
+    :when: 2023-12-03 21:16:42.342102000 Z
+- - :permit
+  - MIT
+  - :who: "@biow0lf"
+    :why:
+    :versions: []
+    :when: 2023-12-03 21:17:06.762743000 Z
+- - :permit
+  - Apache 2.0
+  - :who: "@biow0lf"
+    :why:
+    :versions: []
+    :when: 2023-12-03 21:17:16.353260000 Z
+- - :permit
+  - Simplified BSD, ruby
+  - :who: "@biow0lf"
+    :why:
+    :versions: []
+    :when: 2023-12-03 21:17:22.991112000 Z
+- - :permit
+  - ruby
+  - :who: "@biow0lf"
+    :why:
+    :versions: []
+    :when: 2023-12-03 21:17:26.720800000 Z
+- - :permit
+  - Simplified BSD
+  - :who: "@biow0lf"
+    :why:
+    :versions: []
+    :when: 2023-12-03 21:17:58.860962000 Z
+- - :permit
+  - New BSD
+  - :who: "@biow0lf"
+    :why:
+    :versions: []
+    :when: 2023-12-03 21:18:03.642496000 Z
+- - :permit
+  - MIT AND (BSD-2-Clause OR GPL-2.0-or-later)
+  - :who: "@biow0lf"
+    :why:
+    :versions: []
+    :when: 2023-12-03 21:18:09.390956000 Z
 - - :approve
   - sidekiq
   - :who: "@biow0lf"
     :why:
     :versions: []
-    :when: 2021-08-23 22:44:29.818023000 Z
+    :when: 2023-12-03 21:18:42.617889000 Z
