@@ -25,6 +25,7 @@
 .github/workflows
 .idea/*
 .env
+.envrc
 .env.example
 .fasterer.yml
 .rubocop.yml
