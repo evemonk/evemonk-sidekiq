@@ -1,4 +1,4 @@
-FROM registry.docker.com/library/ruby:3.3.4-slim@sha256:0f5c785e2189ab9ffda522b20c0380dbc51d9991361f9e0bfbcf46bb68d32b29 as base
+FROM registry.docker.com/library/ruby:3.3.4-slim@sha256:0f5c785e2189ab9ffda522b20c0380dbc51d9991361f9e0bfbcf46bb68d32b29 AS base
 
 LABEL maintainer="Igor Zubkov <igor.zubkov@gmail.com>"
 
@@ -15,13 +15,13 @@ ENV RAILS_ENV="production" \
     RUBY_YJIT_ENABLE="1"
 
 RUN set -eux; \
-    gem update --system "3.5.13" ; \
-    gem install bundler --version "2.5.13" --force ; \
+    gem update --system "3.5.15" ; \
+    gem install bundler --version "2.5.15" --force ; \
     gem --version ; \
     bundle --version
 
 # Throw-away build stage to reduce size of final image
-FROM base as build
+FROM base AS build
 
 # Install packages needed to build gems
 # skipcq: DOK-DL3008
