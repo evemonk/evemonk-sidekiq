@@ -40,6 +40,9 @@ RUN set -eux; \
 # Copy application code
 COPY . .
 
+# Precompile bootsnap code for faster boot times
+RUN bundle exec bootsnap precompile app/ lib/ config/ Rakefile
+
 # Final stage for app image
 FROM base
 
