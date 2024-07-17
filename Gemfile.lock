@@ -212,9 +212,9 @@ DEPENDENCIES
   bootsnap
   brakeman
   debug
-  pg (~> 1.1)
+  pg
   propshaft
-  puma (>= 5.0)
+  puma
   rails (~> 7.2.0.beta3)
   tzinfo-data
   web-console
