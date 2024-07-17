@@ -2,9 +2,14 @@
 
 # Ignore git directory.
 /.git/
+/.gitignore
 
 # Ignore bundler config.
 /.bundle
+
+# Ignore all environment files (except templates).
+/.env*
+!/.env*.erb
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -17,21 +22,23 @@
 !/tmp/pids/.keep
 
 # Ignore assets.
-/node_modules/
-/app/assets/builds/*
-!/app/assets/builds/.keep
 /public/assets
 
-.github/workflows
-.idea/*
-.env
-.envrc
-.env.example
-.fasterer.yml
-.rubocop.yml
-.deepsource.toml
-.generators
-.gitattributes
-.gitignore
-.mdlrc
-.hadolint.yml
+# Ignore CI service files.
+/.github
+
+# Ignore development files
+/.devcontainer
+
+# Ignore Docker-related files
+/.dockerignore
+/Dockerfile*
+
+/.idea
+/.fasterer.yml
+/.rubocop.yml
+/.deepsource.toml
+/.generators
+/.gitattributes
+/.mdlrc
+/.hadolint.yml
