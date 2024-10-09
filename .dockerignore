@@ -7,9 +7,8 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore all environment files (except templates).
+# Ignore all environment files.
 /.env*
-!/.env*.erb
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -22,10 +21,9 @@
 !/tmp/pids/.keep
 
 # Ignore assets.
+/app/assets/builds/*
+!/app/assets/builds/.keep
 /public/assets
-
-# Ignore CI service files.
-/.github
 
 # Ignore development files
 /.devcontainer
@@ -42,3 +40,4 @@
 /.gitattributes
 /.mdlrc
 /.hadolint.yml
+/.github
