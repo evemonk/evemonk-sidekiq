@@ -222,7 +222,7 @@ GEM
     rake (13.2.1)
     rdoc (6.8.1)
       psych (>= 4.0.0)
-    redis-client (0.22.2)
+    redis-client (0.23.0)
       connection_pool
     regexp_parser (2.9.3)
     reline (0.5.12)
@@ -449,7 +449,7 @@ CHECKSUMS
   rainbow (3.1.1) sha256=039491aa3a89f42efa1d6dec2fc4e62ede96eb6acd95e52f1ad581182b79bc6a
   rake (13.2.1) sha256=46cb38dae65d7d74b6020a4ac9d48afed8eb8149c040eccf0523bec91907059d
   rdoc (6.8.1) sha256=0128002d1bfc4892bdd780940841e4ca41275f63781fd832d11bc8ba4461462c
-  redis-client (0.22.2) sha256=31fee4b7cf04109b227327fabeaaf1fc5b652cf48a186a03bc607e40767bacc0
+  redis-client (0.23.0) sha256=1f83884ea1b08b83184ad06371c18dfcfebbf05685bfad2b76cec6dffb5a184c
   regexp_parser (2.9.3) sha256=4b620657ed8349d82e1331a076415c79b9dd714a5546162ddd790ea9988f6379
   reline (0.5.12) sha256=41ab36d3fd2aaa169e99f8b82a93b9585f51130529360e24388fcccc20a055a2
   rexml (3.3.9) sha256=d71875b85299f341edf47d44df0212e7658cbdf35aeb69cefdb63f57af3137c9
