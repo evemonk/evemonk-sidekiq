@@ -20,5 +20,14 @@ Service container for running sidekiq web UI from [sidekiq](https://github.com/s
 ## Example `docker-compose.yml`
 
 ```yaml
-
+services:
+  sidekiq-web-ui:
+    image: "docker.io/biow0lf/evemonk-sidekiq:main"
+    container_name: "evemonk_sidekiq_web_ui"
+    restart: "unless-stopped"
+    environment:
+      SECRET_KEY_BASE: "secret-key-base" # run `rails secret` for generate new
+      DATABASE_URL: "postgres://user:password@localhost/database"
+      REDIS_URL: "redis://redis:6379/1"
+      RAILS_MAX_THREADS: "1"
 ```
