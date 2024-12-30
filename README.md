@@ -14,12 +14,11 @@ Service container for running sidekiq web UI from [sidekiq](https://github.com/s
 | `SECRET_KEY_BASE`     | Rails secret                                                                   | not set       | not set              |
 | `WEB_CONCURRENCY`     | Number of CPU                                                                  | not set       | not set              |
 | `RAILS_MAX_THREADS`   | Rails max threads                                                              | `3`           | as default           |
-| `RAILS_MIN_THREADS`   | Rails min threads                                                              | `3`           | as default           |
 | `DATABASE_URL`        | Database configuration. Example: `postgres://user:password@localhost/database` | not set       | not set              |
 | `REDIS_URL`           | Redis configuration for sidekiq. Example: `redis://redis:6379/1`               | not set       | not set              |
 
 ## Example `docker-compose.yml`
 
 ```yaml
-# TODO: write
+
 ```
