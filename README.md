@@ -19,6 +19,9 @@ Service container for running sidekiq web UI from [sidekiq](https://github.com/s
 
 ## Example `docker-compose.yml`
 
+NOTE: Don't forget to close sidekiq web ui with web auth. E.g. [for devise](https://github.com/sidekiq/sidekiq/wiki/Devise).
+Or with http auth in web server/proxy before.
+
 ```yaml
 services:
   sidekiq-web-ui:
